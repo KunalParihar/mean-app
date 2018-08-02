@@ -21,8 +21,10 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+             
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -50,7 +52,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mean:build"
+            "browserTarget": "mean:build",
+            "proxyConfig": "src/proxy.conf.json",
+            "port": 8400
           },
           "configurations": {
             "production": {
